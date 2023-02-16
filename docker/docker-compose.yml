@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  db:
+    container_name: db
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db
+      TZ: 'America/Sao_Paulo'
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - '8080:8080'
